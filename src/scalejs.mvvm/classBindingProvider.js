@@ -167,7 +167,8 @@
                                 bindingName !== "_ko_property_writers" &&
                                     bindingName !== 'valueUpdate' &&
                                         bindingName !== 'optionsText' &&
-                                            !ko.bindingHandlers[bindingName]) {
+                                            bindingName !== 'optionsValue' &&
+                                                !ko.bindingHandlers[bindingName]) {
                             if (binding) {
                                 options.log('Unknown binding handler "' + bindingName + '" found in element',
                                             node,
