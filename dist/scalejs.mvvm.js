@@ -209,7 +209,7 @@ define('scalejs.mvvm/htmlTemplateSource',[
     ko,
     core
 ) {
-    
+    'use strict';
 
     var toArray = core.array.toArray,
         has = core.object.has,
@@ -288,7 +288,7 @@ define('scalejs.mvvm/selectableArray',[
     core
 ) {
     /// <param name="ko" value="window.ko"/>
-    
+    'use strict';
 
     var isObservable = ko.isObservable,
         unwrap = ko.utils.unwrapObservable,
@@ -391,7 +391,7 @@ define('scalejs.mvvm/ko.utils',[
     core,
     ko
 ) {
-    
+    'use strict';
 
     function cloneNodes(nodesArray, shouldCleanNodes) {
         return core.array.toArray(nodesArray).map(function (node) {
@@ -424,7 +424,7 @@ define('scalejs.mvvm/mvvm',[
     selectableArray,
     koUtils
 ) {
-    
+    'use strict';
 
     var merge = core.object.merge,
         toArray = core.array.toArray,
@@ -581,7 +581,7 @@ define('scalejs.bindings/change',[
     ko,
     core
 ) {
-    
+    'use strict';
 
     var is = core.type.is,
         has = core.object.has;
@@ -655,7 +655,7 @@ define('scalejs.bindings/render',[
     ko
 ) {
     /// <param name="ko" value="window.ko" />
-    
+    'use strict';
 
     var is = core.type.is,
         has = core.object.has,
@@ -685,8 +685,7 @@ define('scalejs.bindings/render',[
                 ko.virtualElements.emptyNode(element);
             }
 
-            window.requestAnimationFrame(completed);
-            //setTimeout(completed, 10);
+            setTimeout(completed, 0);
         }
 
         oldBinding = ko.utils.domData.get(element, 'binding');
@@ -757,7 +756,7 @@ define('scalejs.mvvm',[
     renderBinding,
     module
 ) {
-    
+    'use strict';
 
     ko.bindingHandlers.change = changeBinding;
     ko.bindingHandlers.render = renderBinding;
@@ -774,7 +773,7 @@ define('scalejs.mvvm',[
 /*global define*/
 /*jslint unparam:true*/
 define('scalejs.mvvm.bindings',[],function () {
-    
+    'use strict';
 
     return {
         load: function (name, req, onLoad, config) {
@@ -817,7 +816,7 @@ define('scalejs.mvvm.bindings',[],function () {
 /*global define*/
 /*jslint unparam:true*/
 define('scalejs.mvvm.views',[],function () {
-    
+    'use strict';
 
     return {
         load: function (name, req, onLoad, config) {

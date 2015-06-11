@@ -39,8 +39,7 @@ define([
                 ko.virtualElements.emptyNode(element);
             }
 
-            window.requestAnimationFrame(completed);
-            //setTimeout(completed, 10);
+            setTimeout(completed, 0);
         }
 
         oldBinding = ko.utils.domData.get(element, 'binding');
