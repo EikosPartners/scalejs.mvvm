@@ -16,7 +16,10 @@ var require = {
   },
   packages: [
 
-  ]
+  ],
+  shim: {
+
+  }
 };
 /*jshint ignore:end*/
 

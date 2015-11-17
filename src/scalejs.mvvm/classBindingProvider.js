@@ -56,7 +56,8 @@
     //  bindings - an object that contains the binding classes
     //  options - is an object that can include "attribute", "virtualAttribute", bindingRouter, and "fallback" options
     var classBindingsProvider = function (bindings, options) {
-        var existingProvider = new ko.bindingProvider();
+        var existingProvider = new ko.bindingProvider(),
+            loggedBindings = {};
 
         options = options || {};
 
@@ -162,13 +163,15 @@
                 }
 
                 if (options.log) {
-                    for (bindingName in result) {
+                    for (var bindingName in result) {
                         if (result.hasOwnProperty(bindingName) &&
                                 bindingName !== "_ko_property_writers" &&
                                     bindingName !== 'valueUpdate' &&
                                         bindingName !== 'optionsText' &&
                                             bindingName !== 'optionsValue' &&
-                                                !ko.bindingHandlers[bindingName]) {
+                                                bindingName !== 'clickBubble' &&
+                                                    !ko.bindingHandlers[bindingName] &&
+                                                        !loggedBindings[bindingName]) {
                             if (binding) {
                                 options.log('Unknown binding handler "' + bindingName + '" found in element',
                                             node,
@@ -184,6 +187,7 @@
                                             'properly registered. ' +
                                             '\nThe binding will be ignored.');
                             }
+                            loggedBindings[bindingName] = bindingName;
                         }
                     }
                 }
