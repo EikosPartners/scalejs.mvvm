@@ -140,6 +140,7 @@ define([
                 template: template,
                 dataBinding: dataBinding,
                 selectableArray: selectableArray,
+                getRegisteredTemplates: htmlTemplateSource.getRegisteredTemplates,
                 ko: {
                     utils: koUtils
                 }
@@ -159,6 +160,7 @@ define([
                 template: template,
                 dataBinding: dataBinding,
                 selectableArray: selectableArray,
+                getRegisteredTemplates: htmlTemplateSource.getRegisteredTemplates,
                 root: root
             }
         },

@@ -243,6 +243,10 @@ define('scalejs.mvvm/htmlTemplateSource',[
         });
     }
 
+    function getRegisteredTemplates () {
+        return templates;
+    }
+
     function makeTemplateSource ( template ) {
 
         if ( template instanceof Element ) {
@@ -285,7 +289,8 @@ define('scalejs.mvvm/htmlTemplateSource',[
     ko.setTemplateEngine(templateEngine);
 
     return {
-        registerTemplates: registerTemplates
+        registerTemplates: registerTemplates,
+        getRegisteredTemplates : getRegisteredTemplates
     };
 });
 
@@ -559,6 +564,7 @@ define('scalejs.mvvm/mvvm',[
                 template: template,
                 dataBinding: dataBinding,
                 selectableArray: selectableArray,
+                getRegisteredTemplates: htmlTemplateSource.getRegisteredTemplates,
                 ko: {
                     utils: koUtils
                 }
@@ -578,6 +584,7 @@ define('scalejs.mvvm/mvvm',[
                 template: template,
                 dataBinding: dataBinding,
                 selectableArray: selectableArray,
+                getRegisteredTemplates: htmlTemplateSource.getRegisteredTemplates,
                 root: root
             }
         },

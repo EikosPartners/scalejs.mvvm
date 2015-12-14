@@ -34,6 +34,10 @@ define([
         });
     }
 
+    function getRegisteredTemplates () {
+        return templates;
+    }
+
     function makeTemplateSource ( template ) {
 
         if ( template instanceof Element ) {
@@ -76,6 +80,7 @@ define([
     ko.setTemplateEngine(templateEngine);
 
     return {
-        registerTemplates: registerTemplates
+        registerTemplates: registerTemplates,
+        getRegisteredTemplates : getRegisteredTemplates
     };
 });
