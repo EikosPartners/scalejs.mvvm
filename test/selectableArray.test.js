@@ -2,9 +2,9 @@
 /*jslint sloppy: true*/
 /// <reference path="../Scripts/jasmine.js"/>
 define([
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
-    'scalejs!application'
+    'scalejs.application'
 ], function (core, ko) {
     var sandbox = core.buildSandbox('selectableArray.test'),
         is = core.type.is,

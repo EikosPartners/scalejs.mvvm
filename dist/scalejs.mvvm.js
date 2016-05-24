@@ -210,7 +210,7 @@
 /*global define,document,WinJS*/
 define('scalejs.mvvm/htmlTemplateSource',[
     'knockout',
-    'scalejs!core'
+    'scalejs.core'
 ], function (
     ko,
     core
@@ -299,7 +299,7 @@ define('scalejs.mvvm/htmlTemplateSource',[
 /// <reference path="../Scripts/knockout-2.2.1.debug.js" />
 define('scalejs.mvvm/selectableArray',[
     'knockout',
-    'scalejs!core'
+    'scalejs.core'
 ], function (
     ko,
     core
@@ -402,7 +402,7 @@ define('scalejs.mvvm/selectableArray',[
 
 /*global define*/
 define('scalejs.mvvm/ko.utils',[
-    'scalejs!core',
+    'scalejs.core',
     'knockout'
 ], function (
     core,
@@ -427,7 +427,7 @@ define('scalejs.mvvm/ko.utils',[
 define('scalejs.mvvm/mvvm',[
     'knockout',
     'knockout.mapping',
-    'scalejs!core',
+    'scalejs.core',
     'scalejs.mvvm/classBindingProvider',
     './htmlTemplateSource',
     './selectableArray',
@@ -595,7 +595,7 @@ define('scalejs.mvvm/mvvm',[
 /*global define*/
 define('scalejs.bindings/change',[
     'knockout',
-    'scalejs!core'
+    'scalejs.core'
 ], function (
     ko,
     core
@@ -666,7 +666,7 @@ define('scalejs.bindings/change',[
 /*global define,setTimeout,window*/
 /// <reference path="../Scripts/_references.js" />
 define('scalejs.bindings/render',[
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     'scalejs.functional'
 ], function (
@@ -761,7 +761,7 @@ define('scalejs.bindings/render',[
 
 /*global define*/
 define('scalejs.mvvm',[
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     'scalejs.mvvm/mvvm',
     './scalejs.bindings/change',
@@ -816,7 +816,7 @@ define('scalejs.mvvm.bindings',[],function () {
                 return n;
             });
 
-            names.push('scalejs.mvvm', 'scalejs!core');
+            names.push('scalejs.mvvm', 'scalejs.core');
 
             req(names, function () {
                 var core = arguments[arguments.length - 1],
@@ -855,7 +855,7 @@ define('scalejs.mvvm.views',[],function () {
                 return 'text!' + n;
             });
 
-            names.push('scalejs.mvvm', 'scalejs!core');
+            names.push('scalejs.mvvm', 'scalejs.core');
 
             req(names, function () {
                 var core = arguments[arguments.length - 1],

@@ -1,7 +1,7 @@
 /*global define,setTimeout,window*/
 /// <reference path="../Scripts/_references.js" />
 define([
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     'scalejs.functional'
 ], function (

@@ -1,13 +1,13 @@
 {
   "name": "scalejs.mvvm",
-  "version": "0.4.8",
+  "version": "0.5.2",
   "homepage": "https://github.com/EikosPartners/scalejs.mvvm",
   "authors": [
     "Peter Lisovin <peter@lisovin.com>"
   ],
   "description": "MVVM extension for scalable JavaScript application",
   "dependencies": {
-    "scalejs": "lisovin/scalejs",
+    "scalejs": "EikosPartners/scalejs#~0.5.1",
     "requirejs": "~2.1.15",
     "scalejs.functional": "lisovin/scalejs.functional",
     "text": "requirejs/text",

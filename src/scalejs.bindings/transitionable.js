@@ -2,7 +2,7 @@
 /*global console,define,setTimeout*/
 /*jslint unparam: true*/
 define([
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     '../scalejs.mvvm/ko.utils',
     'scalejs.statechart-scion'

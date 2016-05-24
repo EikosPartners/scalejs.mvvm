@@ -2,8 +2,8 @@
 /*jslint sloppy: true*/
 /// <reference path="../Scripts/jasmine.js"/>
 define([
-    'scalejs!core',
-    'scalejs!application'
+    'scalejs.core',
+    'scalejs.application'
 ], function (core) {
     var mvvm = core.mvvm;
 

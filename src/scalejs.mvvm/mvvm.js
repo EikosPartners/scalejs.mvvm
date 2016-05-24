@@ -3,7 +3,7 @@
 define([
     'knockout',
     'knockout.mapping',
-    'scalejs!core',
+    'scalejs.core',
     'scalejs.mvvm/classBindingProvider',
     './htmlTemplateSource',
     './selectableArray',

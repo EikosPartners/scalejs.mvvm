@@ -3,8 +3,8 @@
 /// <reference path="../Scripts/jasmine.js"/>
 //Author: Jeremy Micah Bassi
 define([
-    'scalejs!core',
-    'scalejs!application',
+    'scalejs.core',
+    'scalejs.application',
     './dataclasstestBindings',
     'knockout'
 ], function (
