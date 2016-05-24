@@ -7,7 +7,7 @@
   ],
   "description": "MVVM extension for scalable JavaScript application",
   "dependencies": {
-    "scalejs": "lisovin/scalejs",
+    "scalejs": "EikosPartners/scalejs#~0.5.1",
     "requirejs": "~2.1.15",
     "scalejs.functional": "lisovin/scalejs.functional",
     "text": "requirejs/text",
