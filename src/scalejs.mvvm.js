@@ -1,6 +1,6 @@
 /*global define*/
 define([
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     'scalejs.mvvm/mvvm',
     './scalejs.bindings/change',

@@ -2,7 +2,7 @@
 /*jslint sloppy: true*/
 /// <reference path="../Scripts/jasmine.js"/>
 define([
-    'scalejs!core',
+    'scalejs.core',
     'knockout',
     'scalejs!application'
 ], function (core, ko) {

@@ -1,7 +1,7 @@
 /*global define*/
 define([
     'knockout',
-    'scalejs!core'
+    'scalejs.core'
 ], function (
     ko,
     core
