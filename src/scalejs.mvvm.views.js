@@ -21,7 +21,7 @@ define(function () {
                 return 'text!' + n;
             });
 
-            names.push('scalejs.mvvm', 'scalejs!core');
+            names.push('scalejs.mvvm', 'scalejs.core');
 
             req(names, function () {
                 var core = arguments[arguments.length - 1],

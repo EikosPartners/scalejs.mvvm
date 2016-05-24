@@ -4,7 +4,7 @@
 define([
     'scalejs.core',
     'knockout',
-    'scalejs!application'
+    'scalejs.application'
 ], function (core, ko) {
     var sandbox = core.buildSandbox('selectableArray.test'),
         is = core.type.is,

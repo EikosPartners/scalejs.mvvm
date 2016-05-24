@@ -3,7 +3,7 @@
 /// <reference path="../Scripts/jasmine.js"/>
 define([
     'scalejs.core',
-    'scalejs!application'
+    'scalejs.application'
 ], function (core) {
     var mvvm = core.mvvm;
 

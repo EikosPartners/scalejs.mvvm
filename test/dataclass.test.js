@@ -4,7 +4,7 @@
 //Author: Jeremy Micah Bassi
 define([
     'scalejs.core',
-    'scalejs!application',
+    'scalejs.application',
     './dataclasstestBindings',
     'knockout'
 ], function (
