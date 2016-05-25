@@ -765,7 +765,11 @@ define('scalejs.mvvm',[
     ko.virtualElements.allowedBindings.change = true;
     ko.virtualElements.allowedBindings.render = true;
 
-    mvvm.init(module.config());
+    if(module.config && core.type.is(module.config, 'function')) {
+        mvvm.init(module.config());
+    } else {
+        mvvm.init({});
+    }
 
     core.registerExtension(mvvm);
 });
