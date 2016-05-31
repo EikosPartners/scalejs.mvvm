@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "knockout": "^3.4.0",
-    "knockout.mapping": "^2.4.3"
+    "knockout.mapping": "^2.4.3",
+    "scalejs": "git+https://github.com/EikosPartners/scalejs.git#es6"
   },
   "main" : "dist/scalejs.mvvm.js"
 }

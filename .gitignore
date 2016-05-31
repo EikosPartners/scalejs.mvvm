@@ -351,3 +351,5 @@ build/
 # Documentation
 /docs
 !/docs/crojsdoc.yaml
+
+.idea/
