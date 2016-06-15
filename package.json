@@ -1,6 +1,6 @@
 {
   "name": "scalejs.mvvm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "devDependencies": {
     "bower": "^1.3.9",
     "coffeelint": "^1.6.0",
@@ -27,5 +27,5 @@
     "knockout.mapping": "^2.4.3",
     "scalejs": "git+https://github.com/EikosPartners/scalejs.git#es6"
   },
-  "main" : "dist/scalejs.mvvm.js"
+  "main": "dist/scalejs.mvvm.js"
 }
