@@ -1,7 +1,7 @@
 /*global define*/
 import core from 'scalejs.core';
 import ko from 'knockout';
-import mvvm from './mvvm';
+import mvvm from './scalejs.mvvm/mvvm';
 import changeBinding from './scalejs.bindings/change';
 import renderBinding from './scalejs.bindings/render';
     

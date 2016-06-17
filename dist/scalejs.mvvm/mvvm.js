@@ -16,7 +16,7 @@ var _scalejs = require('scalejs.core');
 
 var _scalejs2 = _interopRequireDefault(_scalejs);
 
-var _classBindingProvider = require('scalejs.mvvm/classBindingProvider');
+var _classBindingProvider = require('./classBindingProvider');
 
 var _classBindingProvider2 = _interopRequireDefault(_classBindingProvider);
 

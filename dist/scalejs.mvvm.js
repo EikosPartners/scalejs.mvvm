@@ -13,7 +13,7 @@ var _knockout = require('knockout');
 
 var _knockout2 = _interopRequireDefault(_knockout);
 
-var _mvvm = require('./mvvm');
+var _mvvm = require('./scalejs.mvvm/mvvm');
 
 var _mvvm2 = _interopRequireDefault(_mvvm);
 
