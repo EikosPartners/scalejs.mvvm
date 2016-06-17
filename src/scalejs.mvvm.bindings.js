@@ -1,9 +1,9 @@
 /*global define*/
 /*jslint unparam:true*/
-define(function () {
-    'use strict';
 
-    return {
+    
+
+    export default {
         load: function (name, req, onLoad, config) {
             /*jslint regexp: true*/
             var names = name.match(/([^,]+)/g) || [];
@@ -39,4 +39,4 @@ define(function () {
             });
         }
     };
-});
+

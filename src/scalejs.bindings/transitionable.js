@@ -1,18 +1,12 @@
 /// <reference path="../scripts/_references.js" />
 /*global console,define,setTimeout*/
 /*jslint unparam: true*/
-define([
-    'scalejs.core',
-    'knockout',
-    '../scalejs.mvvm/ko.utils',
-    'scalejs.statechart-scion'
-], function (
-    core,
-    ko,
-    koUtils
-) {
+import core from 'scalejs.core';
+import ko from 'knockout';
+import koUtils from '../scalejs.mvvm/ko.utils';
+import 'scalejs.statechart-scion';
     /// <param name="ko" value="window.ko"/>
-    'use strict';
+    
 
     var array = core.array,
         merge = core.object.merge,
@@ -176,10 +170,10 @@ define([
         tm.start();
     }
 
-    return {
+    export default {
         init: init,
         update: update
     };
-});
+
 /*jslint unparam: false*/
 

@@ -1,20 +1,10 @@
 /*global define*/
-define([
-    'scalejs.core',
-    'knockout',
-    'scalejs.mvvm/mvvm',
-    './scalejs.bindings/change',
-    './scalejs.bindings/render',
-    'module'
-], function (
-    core,
-    ko,
-    mvvm,
-    changeBinding,
-    renderBinding,
-    module
-) {
-    'use strict';
+import core from 'scalejs.core';
+import ko from 'knockout';
+import mvvm from './mvvm';
+import changeBinding from './scalejs.bindings/change';
+import renderBinding from './scalejs.bindings/render';
+    
 
     ko.bindingHandlers.change = changeBinding;
     ko.bindingHandlers.render = renderBinding;
@@ -22,12 +12,40 @@ define([
     ko.virtualElements.allowedBindings.change = true;
     ko.virtualElements.allowedBindings.render = true;
 
-    if(module.config && core.type.is(module.config, 'function')) {
-        mvvm.init(module.config());
-    } else {
-        mvvm.init({});
+    core.registerExtension(mvvm);
+
+    // base 
+    let { init } = mvvm;
+
+    // rendering helpers
+    let { root, template, dataClass, dataBinding } = mvvm.core.mvvm;
+
+    // registry
+    let { registerTemplates, registerBindings, getRegisteredTemplates } = mvvm.core.mvvm;
+
+    // knockout
+    let { observable, observableArray, computed } = mvvm.sandbox.mvvm;
+
+    // viewmodel helpers
+    let { toJson, toObject, toViewModel } = mvvm.sandbox.mvvm;
+
+    export {
+        init,
+        root,
+        template,
+        dataClass,
+        dataBinding,
+        registerTemplates,
+        registerBindings,
+        getRegisteredTemplates,
+        observable,
+        observableArray,
+        computed,
+        toJson,
+        toObject,
+        toViewModel
     }
 
-    core.registerExtension(mvvm);
-});
+    export default mvvm
+
 

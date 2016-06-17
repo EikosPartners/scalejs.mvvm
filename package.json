@@ -1,6 +1,14 @@
 {
   "name": "scalejs.mvvm",
   "version": "1.0.0",
+  "description": "Brings mvvm capabilities to applications",
+  "main": "dist/scalejs.mvvm.js",
+  "scripts": {
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist --source-maps",
+    "doc": "jsdoc -d ./doc/ src/ -r",
+    "test": "karma start test/karma_config/karma.config.js",
+    "test-coverage": "rimraf test/coverage && karma start test/karma_config/karma.config.coverage.js"
+  },
   "dependencies": {
     "knockout": "^3.4.0",
     "knockout.mapping": "^2.4.3",
@@ -25,6 +33,5 @@
     "webpack": "^1.13.1",
     "karma-webpack": "^1.7.0",
     "karma-sourcemap-loader": "^0.3.7"
-  },
-  "main": "dist/scalejs.mvvm.js"
+  }
 }

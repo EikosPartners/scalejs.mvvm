@@ -1,15 +1,10 @@
 /*global define,document,setTimeout*/
 /*jslint nomen: true*/
 /// <reference path="../Scripts/knockout-2.2.1.debug.js" />
-define([
-    'knockout',
-    'scalejs.core'
-], function (
-    ko,
-    core
-) {
+import ko from 'knockout';
+import core from 'scalejs.core';
     /// <param name="ko" value="window.ko"/>
-    'use strict';
+    
 
     var isObservable = ko.isObservable,
         unwrap = ko.utils.unwrapObservable,
@@ -18,7 +13,7 @@ define([
         has = core.object.has,
         array = core.array;
 
-    return function selectableArray(items, opts) {
+    export default function selectableArray(items, opts) {
         /*selectable(items, {
             selectedItem: selectedTile,
             selectionPolicy: 'single',
@@ -102,4 +97,4 @@ define([
 
         return result;
     };
-});
+

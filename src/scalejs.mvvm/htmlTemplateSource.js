@@ -1,12 +1,7 @@
 /*global define,document,WinJS*/
-define([
-    'knockout',
-    'scalejs.core'
-], function (
-    ko,
-    core
-) {
-    'use strict';
+import ko from 'knockout';
+import core from 'scalejs.core';
+    
 
     var toArray = core.array.toArray,
         has = core.object.has,
@@ -79,8 +74,8 @@ define([
 
     ko.setTemplateEngine(templateEngine);
 
-    return {
+    export default {
         registerTemplates: registerTemplates,
         getRegisteredTemplates : getRegisteredTemplates
     };
-});
+

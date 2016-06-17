@@ -1,12 +1,7 @@
 /*global define*/
-define([
-    'scalejs.core',
-    'knockout'
-], function (
-    core,
-    ko
-) {
-    'use strict';
+import core from 'scalejs.core';
+import ko from 'knockout';
+    
 
     function cloneNodes(nodesArray, shouldCleanNodes) {
         return core.array.toArray(nodesArray).map(function (node) {
@@ -15,7 +10,7 @@ define([
         });
     }
 
-    return {
+    export default {
         cloneNodes: cloneNodes
     };
-});
+

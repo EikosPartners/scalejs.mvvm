@@ -1,12 +1,7 @@
 /*global define*/
-define([
-    'knockout',
-    'scalejs.core'
-], function (
-    ko,
-    core
-) {
-    'use strict';
+import ko from 'knockout';
+import core from 'scalejs.core';
+    
 
     var is = core.type.is,
         has = core.object.has;
@@ -64,7 +59,7 @@ define([
     }
     /*jslint unparam: false*/
 
-    return {
+    export default {
         init: init
     };
-});
+

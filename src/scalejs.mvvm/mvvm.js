@@ -1,23 +1,13 @@
 /*global define,document*/
 /*jslint nomen: true*/
-define([
-    'knockout',
-    'knockout.mapping',
-    'scalejs.core',
-    'scalejs.mvvm/classBindingProvider',
-    './htmlTemplateSource',
-    './selectableArray',
-    './ko.utils'
-], function (
-    ko,
-    mapping,
-    core,
-    ClassBindingProvider,
-    htmlTemplateSource,
-    selectableArray,
-    koUtils
-) {
-    'use strict';
+import ko from 'knockout';
+import mapping from 'knockout.mapping';
+import core from 'scalejs.core';
+import ClassBindingProvider from 'scalejs.mvvm/classBindingProvider';
+import htmlTemplateSource from './htmlTemplateSource';
+import selectableArray from './selectableArray';
+import koUtils from './ko.utils';
+    
 
     var merge = core.object.merge,
         toArray = core.array.toArray,
@@ -129,7 +119,7 @@ define([
         }
     }
 
-    return {
+    export default {
         core: {
             mvvm: {
                 root: root,
@@ -166,4 +156,4 @@ define([
         },
         init: init
     };
-});
+

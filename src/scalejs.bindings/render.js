@@ -1,14 +1,9 @@
 /*global define,setTimeout,window*/
 /// <reference path="../Scripts/_references.js" />
-define([
-    'scalejs.core',
-    'knockout'
-], function (
-    core,
-    ko
-) {
+import core from 'scalejs.core';
+import ko from 'knockout';
     /// <param name="ko" value="window.ko" />
-    'use strict';
+    
 
     var is = core.type.is,
         has = core.object.has,
@@ -70,8 +65,8 @@ define([
     }
     /*jslint unparam: false*/
 
-    return {
+    export default {
         init: init,
         update: update
     };
-});
+
