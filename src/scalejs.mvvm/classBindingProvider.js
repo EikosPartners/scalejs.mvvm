@@ -163,15 +163,21 @@
                 }
 
                 if (options.log) {
+                    const knownBindingHandlers = [
+                        '_ko_property_writers',
+                        'valueUpdate',
+                        'optionsText',
+                        'optionsValue',
+                        'clickBubble',
+                        'valueAllowUnset',
+                        ''
+                    ];
                     for (var bindingName in result) {
-                        if (result.hasOwnProperty(bindingName) &&
-                                bindingName !== "_ko_property_writers" &&
-                                    bindingName !== 'valueUpdate' &&
-                                        bindingName !== 'optionsText' &&
-                                            bindingName !== 'optionsValue' &&
-                                                bindingName !== 'clickBubble' &&
-                                                    !ko.bindingHandlers[bindingName] &&
-                                                        !loggedBindings[bindingName]) {
+                        if (result.hasOwnProperty(bindingName)
+                            && knownBindingHandlers.indexOf(bindingName) === -1
+                            && !ko.bindingHandlers[bindingName]
+                            && !loggedBindings[bindingName]) {
+
                             if (binding) {
                                 options.log('Unknown binding handler "' + bindingName + '" found in element',
                                             node,
@@ -187,6 +193,7 @@
                                             'properly registered. ' +
                                             '\nThe binding will be ignored.');
                             }
+                            
                             loggedBindings[bindingName] = bindingName;
                         }
                     }
