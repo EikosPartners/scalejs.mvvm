@@ -36,37 +36,37 @@ _knockout2.default.virtualElements.allowedBindings.render = true;
 
 _scalejs2.default.registerExtension(_mvvm2.default);
 
-// base
+// base 
 var init = _mvvm2.default.init;
 
 // rendering helpers
 
-var _mvvm$core$mvvm = _mvvm2.default.core.mvvm;
-var root = _mvvm$core$mvvm.root;
-var template = _mvvm$core$mvvm.template;
-var dataClass = _mvvm$core$mvvm.dataClass;
-var dataBinding = _mvvm$core$mvvm.dataBinding;
+var _mvvm$core$mvvm = _mvvm2.default.core.mvvm,
+    root = _mvvm$core$mvvm.root,
+    template = _mvvm$core$mvvm.template,
+    dataClass = _mvvm$core$mvvm.dataClass,
+    dataBinding = _mvvm$core$mvvm.dataBinding;
 
 // registry
 
-var _mvvm$core$mvvm2 = _mvvm2.default.core.mvvm;
-var registerTemplates = _mvvm$core$mvvm2.registerTemplates;
-var registerBindings = _mvvm$core$mvvm2.registerBindings;
-var getRegisteredTemplates = _mvvm$core$mvvm2.getRegisteredTemplates;
+var _mvvm$core$mvvm2 = _mvvm2.default.core.mvvm,
+    registerTemplates = _mvvm$core$mvvm2.registerTemplates,
+    registerBindings = _mvvm$core$mvvm2.registerBindings,
+    getRegisteredTemplates = _mvvm$core$mvvm2.getRegisteredTemplates;
 
 // knockout
 
-var _mvvm$sandbox$mvvm = _mvvm2.default.sandbox.mvvm;
-var observable = _mvvm$sandbox$mvvm.observable;
-var observableArray = _mvvm$sandbox$mvvm.observableArray;
-var computed = _mvvm$sandbox$mvvm.computed;
+var _mvvm$sandbox$mvvm = _mvvm2.default.sandbox.mvvm,
+    observable = _mvvm$sandbox$mvvm.observable,
+    observableArray = _mvvm$sandbox$mvvm.observableArray,
+    computed = _mvvm$sandbox$mvvm.computed;
 
 // viewmodel helpers
 
-var _mvvm$sandbox$mvvm2 = _mvvm2.default.sandbox.mvvm;
-var toJson = _mvvm$sandbox$mvvm2.toJson;
-var toObject = _mvvm$sandbox$mvvm2.toObject;
-var toViewModel = _mvvm$sandbox$mvvm2.toViewModel;
+var _mvvm$sandbox$mvvm2 = _mvvm2.default.sandbox.mvvm,
+    toJson = _mvvm$sandbox$mvvm2.toJson,
+    toObject = _mvvm$sandbox$mvvm2.toObject,
+    toViewModel = _mvvm$sandbox$mvvm2.toViewModel;
 exports.init = init;
 exports.root = root;
 exports.template = template;

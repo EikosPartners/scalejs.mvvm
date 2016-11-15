@@ -15,8 +15,6 @@ var _knockout2 = _interopRequireDefault(_knockout);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*global define*/
-
-
 function cloneNodes(nodesArray, shouldCleanNodes) {
     return _scalejs2.default.array.toArray(nodesArray).map(function (node) {
         var clonedNode = node.cloneNode(true);

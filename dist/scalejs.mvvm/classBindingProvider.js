@@ -7,8 +7,8 @@
         define(["knockout", "exports"], factory);
         //normal script tag
     } else {
-            factory(ko);
-        }
+        factory(ko);
+    }
 })(function (ko, exports, undefined) {
     var objectMap = function objectMap(source, mapping) {
         var target, prop;
@@ -161,13 +161,16 @@
                 }
 
                 if (options.log) {
+                    var knownBindingHandlers = ['_ko_property_writers', 'valueUpdate', 'optionsText', 'optionsValue', 'clickBubble', 'valueAllowUnset', ''];
                     for (var bindingName in result) {
-                        if (result.hasOwnProperty(bindingName) && bindingName !== "_ko_property_writers" && bindingName !== 'valueUpdate' && bindingName !== 'optionsText' && bindingName !== 'optionsValue' && bindingName !== 'clickBubble' && !ko.bindingHandlers[bindingName] && !loggedBindings[bindingName]) {
+                        if (result.hasOwnProperty(bindingName) && knownBindingHandlers.indexOf(bindingName) === -1 && !ko.bindingHandlers[bindingName] && !loggedBindings[bindingName]) {
+
                             if (binding) {
                                 options.log('Unknown binding handler "' + bindingName + '" found in element', node, ' defined in data-class "' + classes + '" as', binding, '\nMake sure that binding handler\'s name is spelled correctly ' + 'and that it\'s properly registered. ' + '\nThe binding will be ignored.');
                             } else {
                                 options.log('Unknown binding handler "' + bindingName + '" in', node, '\nMake sure that it\'s name spelled correctly and that it\'s ' + 'properly registered. ' + '\nThe binding will be ignored.');
                             }
+
                             loggedBindings[bindingName] = bindingName;
                         }
                     }

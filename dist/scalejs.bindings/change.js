@@ -15,8 +15,6 @@ var _scalejs2 = _interopRequireDefault(_scalejs);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*global define*/
-
-
 var is = _scalejs2.default.type.is,
     has = _scalejs2.default.object.has;
 

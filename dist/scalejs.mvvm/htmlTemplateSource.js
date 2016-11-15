@@ -15,8 +15,6 @@ var _scalejs2 = _interopRequireDefault(_scalejs);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /*global define,document,WinJS*/
-
-
 var toArray = _scalejs2.default.array.toArray,
     has = _scalejs2.default.object.has,
     templateEngine = new _knockout2.default.nativeTemplateEngine(),
